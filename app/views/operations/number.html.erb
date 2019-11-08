@@ -1,0 +1,17 @@
+<h1><%= @title %></h1>
+
+<%= form_with scope: :number, local: true do |form| %>
+    <p>
+      <%= @title %><br>
+      <%= form.text_field :title %>
+    </p>
+   
+    <p>
+      <%= @title %><br>
+      <%= form.text_area :text %>
+    </p>
+   
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
