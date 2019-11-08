@@ -1,6 +1,6 @@
-<h1> Tarifa fija: <%= @rate %> <h1> 
-<h1> Total: <%= @total %> <h1>
-<h1> Obreros -> Pago</h1> 
+<h1> Tarifa fija: <%= @rate %> </h1> 
+<h1> Total: <%= @total %> </h1>
+<p> Horas trabajas -> Pago</p> 
 <% for i in 0...@hours.size %>
-    <p><%= @hours[i] %> --> <%= @payroll[i] %></p>
+    <h3><%= i %>. </h3><p><%= @hours[i] %> => <%= @payroll[i] %></p>
 <% end %>

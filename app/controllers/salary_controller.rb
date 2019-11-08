@@ -2,8 +2,8 @@ class SalaryController < ApplicationController
     def index
     end
     def computation
-        @workers = params[:index][:quantity]
-        @rate = params[:index][:rate]
+        @workers = params[:index][:quantity].to_i
+        @rate = params[:index][:rate].to_i
         @total = 0
         @hours = generateWorkers
         @payroll = estimatePayroll
@@ -13,6 +13,7 @@ class SalaryController < ApplicationController
         objArray = Array.new
         while (i <= @workers) do
             objArray.push rand(1..70)
+            i += 1;
         end
         return objArray
     end
@@ -26,12 +27,12 @@ class SalaryController < ApplicationController
         end
         return payroll
     end
-    def estimateSalary hours
+    def estimateSalary element
         salary = 0
         if(element < 36)
             salary = element * @rate
         else
-            salary = ((element - 35) * (rate * 1.5)) + (35 * rate)
+            salary = ((element - 35) * (@rate * 1.5)) + (35 * @rate)
         end
         if salary > 20000
             salary -= (salary * 20)/100
