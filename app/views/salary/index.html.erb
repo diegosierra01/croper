@@ -1,0 +1,12 @@
+<h1>Nómina salarial</h1>
+<%= form_with scope: :index, local: true do |form| %>
+    Número de obreros
+    <%= form.text_field :quantity %>
+
+    Tarifa fija ($)
+    <%= form.text_field :rate %>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
