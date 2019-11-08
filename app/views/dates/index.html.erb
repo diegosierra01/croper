@@ -1,1 +1,15 @@
-<h1>Index</h1>
+<h1>Fecha</h1>
+<%= form_with scope: :index, local: true do |form| %>
+    <p>
+        Día - Mes - Año
+    </p>
+    <p>
+        <%= form.text_field 'day', :maxlength => 2 %>
+        <%= form.text_field 'month', :maxlength => 2 %> 
+        <%= form.text_field 'year', :maxlength => 4 %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>

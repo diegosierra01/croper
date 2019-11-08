@@ -1,6 +1,6 @@
 class OperationsController < ApplicationController
     def number
-        @title = 'Tabla de multiplicar'
+        @title = 'Operaciones con un número'
     end
     def operations
         @number = params[:number][:title].to_i
