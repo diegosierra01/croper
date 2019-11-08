@@ -8,7 +8,7 @@ function sortOut(number){
         answer = 'Introduce un número menor a 5000 y mayor a 0';
     }
     if(number > 3999){
-        answer = turnNumber(number-4000);
+        answer = 'iv' + '\xaf' + turnNumber(number-4000);
         vinculum  = true;
     }else{
         answer = turnNumber(number);
@@ -27,5 +27,4 @@ function turnNumber(number){
     return cad;
 }
 
-//console.log(sortOut(4999));
-document.getElementById('contenido').innerHTML = sortOut(4999);
+console.log(sortOut(4999));

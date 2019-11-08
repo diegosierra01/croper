@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root 'home#index'
   get 'number' => 'operations#number'
   post 'number' => 'operations#operations'
   get 'date' => 'dates#index'
