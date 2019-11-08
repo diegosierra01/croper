@@ -27,4 +27,5 @@ function turnNumber(number){
     return cad;
 }
 
-console.log(sortOut(4999));
+//console.log(sortOut(4999));
+document.getElementById('contenido').innerHTML = sortOut(4999);

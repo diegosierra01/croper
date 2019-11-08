@@ -6,4 +6,4 @@ function generateToken(){
     }
 }
 
-generateToken();
+document.getElementById('domino').innerHTML = generateToken();

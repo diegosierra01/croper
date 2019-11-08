@@ -7,9 +7,15 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="./app/assets/javascripts/domino.js"></script>
+    <script type="text/javascript" src="./app/assets/javascripts/romanos.js"></script>
   </head>
 
   <body>
+    <div id="domino"></div>
+    <div id="romanos"></div>
+    <div id="dados"></div>
+    <div id="alumnos"></div>
     <%= yield %>
   </body>
 </html>
